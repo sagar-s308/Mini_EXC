@@ -44,7 +44,7 @@ st.markdown("""
  
     /* Increase Metric label */
     div[data-testid="stMetricLabel"] {
-        font-size: 22px !important;
+        font-size: 19px !important;
     }
  
     /* Highlight Predicted Cost */
@@ -180,6 +180,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
