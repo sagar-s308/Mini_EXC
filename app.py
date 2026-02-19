@@ -21,7 +21,7 @@ st.markdown("""
     div[data-testid="stNumberInput"] input {
         width: 120px !important;
         padding: 6px !important;
-        font-size: 19px !important;
+        font-size: 17px !important;
         text-align: left;
        
     }
@@ -185,6 +185,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
