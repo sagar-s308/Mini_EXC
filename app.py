@@ -6,40 +6,47 @@ import numpy as np
 
 # ---------- Page config ----------
 st.set_page_config(page_title="Cylinder Cost estimator for Mini Excavators", layout="wide")
-
+ 
 # ---------- Uniform Small Input Box CSS ----------
 st.markdown("""
-    <style>
+<style>
+ 
+    /* ===== TITLE SIZE ===== */
+    h1 {
+        font-size: 46px !important;   /* Change title size here */
+        font-weight: 700;
+    }
+ 
     /* Make ALL number input boxes same width */
     div[data-testid="stNumberInput"] input {
         width: 120px !important;
         padding: 6px !important;
-        font-size: 19px !important;   /* Increased +5 */
+        font-size: 19px !important;
         text-align: left;
-        
+        background-color: #f2f2f2;
     }
-
+ 
     /* Increase Selectbox font */
     div[data-testid="stSelectbox"] div {
-        font-size: 14px !important;   /* Increased +5 */
+        font-size: 19px !important;
     }
-
+ 
     /* Increase input labels */
     label {
-        font-size: 14px !important;   /* Increased +5 */
+        font-size: 19px !important;
     }
-
+ 
     /* Increase Metric value (Estimated Weight) */
     div[data-testid="stMetricValue"] {
         font-size: 26px !important;
         font-weight: bold;
     }
-
+ 
     /* Increase Metric label */
     div[data-testid="stMetricLabel"] {
-        font-size: 18px !important;
+        font-size: 22px !important;
     }
-
+ 
     /* Highlight Predicted Cost */
     .cost-card {
         background-color: #e8f4ff;
@@ -47,15 +54,19 @@ st.markdown("""
         border-radius: 10px;
         border: 2px solid #1f77ff;
         text-align: center;
-        font-size: 25px !important;   /* Increased +5 */
+        font-size: 25px !important;
         font-weight: bold;
         color: #003b8e;
     }
-    </style>
+ 
+</style>
 """, unsafe_allow_html=True)
-
+ 
 # ---------- Logo ----------
 st.image("logo.png", width=250)
+ 
+# ---------- Title ----------
+st.title("Cylinder Cost estimator for Mini Excavators")
 
 
 # ---------- Load model ----------
@@ -67,7 +78,7 @@ model = load_model()
 
 
 # ---------- Title ----------
-st.title("Cylinder Cost estimator for Mini Excavators")
+# st.title("Cylinder Cost estimator for Mini Excavators")
 
 
 # ---------- Options ----------
@@ -169,6 +180,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
