@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # ---------- Logo ----------
-st.image("logo.png", width=250)   # keep logo.png in same folder
+#st.image("logo.png", width=250)   # keep logo.png in same folder
 
 # ---------- Page config ----------
 st.set_page_config(page_title="Cylinder Cost estimator for Mini Excavators", layout="wide")
@@ -125,5 +125,6 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
