@@ -7,55 +7,54 @@ import numpy as np
 # ---------- Page config ----------
 st.set_page_config(page_title="Cylinder Cost estimator for Mini Excavators", layout="wide")
  
-# ---------- Uniform Input + Output Styling ----------
+# ---------- Uniform Small Input Box CSS ----------
 st.markdown("""
 <style>
  
     /* ===== TITLE SIZE ===== */
     h1 {
-        font-size: 46px !important;
+        font-size: 40px !important;   /* Change title size here */
         font-weight: 700;
     }
  
-    /* ===== NUMBER INPUT BOX ===== */
+    /* Make ALL number input boxes same width */
     div[data-testid="stNumberInput"] input {
         width: 120px !important;
         padding: 6px !important;
-        font-size: 20px !important;   /* UNIFORM = 20 */
+        font-size: 19px !important;
         text-align: left;
-        background-color: #f2f2f2;
+       
     }
  
-    /* ===== SELECTBOX TEXT ===== */
+    /* Increase Selectbox font */
     div[data-testid="stSelectbox"] div {
-        font-size: 20px !important;   /* UNIFORM = 20 */
+        font-size: 19px !important;
     }
  
-    /* ===== INPUT LABELS ===== */
+    /* Increase input labels */
     label {
-        font-size: 20px !important;   /* UNIFORM = 20 */
-        font-weight: 500;
+        font-size: 19px !important;
     }
  
-    /* ===== METRIC VALUE (OUTPUT NUMBERS) ===== */
+    /* Increase Metric value (Estimated Weight) */
     div[data-testid="stMetricValue"] {
         font-size: 26px !important;
         font-weight: bold;
     }
  
-    /* ===== METRIC LABEL ===== */
+    /* Increase Metric label */
     div[data-testid="stMetricLabel"] {
         font-size: 22px !important;
     }
  
-    /* ===== HIGHLIGHTED COST CARD ===== */
+    /* Highlight Predicted Cost */
     .cost-card {
         background-color: #e8f4ff;
         padding: 20px;
         border-radius: 10px;
         border: 2px solid #1f77ff;
         text-align: center;
-        font-size: 26px !important;
+        font-size: 25px !important;
         font-weight: bold;
         color: #003b8e;
     }
