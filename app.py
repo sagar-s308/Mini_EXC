@@ -52,6 +52,23 @@ with col2:
 # ---------- Dynamic calculation ----------
 weight = (np.pi / 4) * (0.00000785) * (tube_OD**2 * closed_len - (bore**2 - rod**2) * stroke)
 
+# ---------- Custom Font Size ----------
+st.markdown("""
+    <style>
+    .stSlider label, .stSelectbox label {
+        font-size: 22px !important;
+        font-weight: 600;
+    }
+    h1 {
+        font-size: 40px !important;
+        font-weight: 800;
+    }
+    .css-184tjsw p {
+        font-size: 20px !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
 if weight < 0:
     st.warning("Estimated weight is negative. Please check inputs.")
 
@@ -79,3 +96,4 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
