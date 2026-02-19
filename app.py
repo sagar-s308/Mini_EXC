@@ -39,10 +39,7 @@ st.markdown("""
     }
 
  
-    /* Increase input labels */
-    label {
-        font-size: 19px !important;
-    }
+  
  
     /* Increase Metric value (Estimated Weight) */
     div[data-testid="stMetricValue"] {
@@ -129,7 +126,7 @@ with left:
 
 # ================= RIGHT PANEL =================
 with right:
-    st.markdown("#### Configuration")
+    st.markdown("#### Application")
 
     application = st.selectbox(
         "Application Type",
@@ -188,6 +185,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
