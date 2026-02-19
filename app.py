@@ -33,7 +33,7 @@ st.markdown("""
  
     /* Increase input labels */
     label {
-        font-size: 19px !important;
+        font-size: 16px !important;
     }
  
     /* Increase Metric value (Estimated Weight) */
@@ -44,7 +44,7 @@ st.markdown("""
  
     /* Increase Metric label */
     div[data-testid="stMetricLabel"] {
-        font-size: 19px !important;
+        font-size: 22px !important;
     }
  
     /* Highlight Predicted Cost */
@@ -180,6 +180,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
