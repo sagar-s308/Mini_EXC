@@ -28,7 +28,7 @@ st.markdown("""
  
     /* Increase Selectbox font */
     div[data-testid="stSelectbox"] div {
-        font-size: 19px !important;
+        font-size: 14px !important;
     }
     
     div[data-testid="stNumberInput"] > label,
@@ -185,6 +185,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
