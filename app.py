@@ -13,7 +13,7 @@ st.markdown("""
  
     /* ===== TITLE SIZE ===== */
     h1 {
-        font-size: 46px !important;   /* Change title size here */
+        font-size: 40px !important;   /* Change title size here */
         font-weight: 700;
     }
  
@@ -23,7 +23,7 @@ st.markdown("""
         padding: 6px !important;
         font-size: 19px !important;
         text-align: left;
-        background-color: #f2f2f2;
+       
     }
  
     /* Increase Selectbox font */
@@ -180,6 +180,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
