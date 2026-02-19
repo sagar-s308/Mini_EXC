@@ -7,54 +7,55 @@ import numpy as np
 # ---------- Page config ----------
 st.set_page_config(page_title="Cylinder Cost estimator for Mini Excavators", layout="wide")
  
-# ---------- Uniform Small Input Box CSS ----------
+# ---------- Uniform Input + Output Styling ----------
 st.markdown("""
 <style>
  
     /* ===== TITLE SIZE ===== */
     h1 {
-        font-size: 40px !important;   /* Change title size here */
+        font-size: 46px !important;
         font-weight: 700;
     }
  
-    /* Make ALL number input boxes same width */
+    /* ===== NUMBER INPUT BOX ===== */
     div[data-testid="stNumberInput"] input {
         width: 120px !important;
         padding: 6px !important;
-        font-size: 19px !important;
+        font-size: 20px !important;   /* UNIFORM = 20 */
         text-align: left;
-       
+        background-color: #f2f2f2;
     }
  
-    /* Increase Selectbox font */
+    /* ===== SELECTBOX TEXT ===== */
     div[data-testid="stSelectbox"] div {
-        font-size: 19px !important;
+        font-size: 20px !important;   /* UNIFORM = 20 */
     }
  
-    /* Increase input labels */
+    /* ===== INPUT LABELS ===== */
     label {
-        font-size: 16px !important;
+        font-size: 20px !important;   /* UNIFORM = 20 */
+        font-weight: 500;
     }
  
-    /* Increase Metric value (Estimated Weight) */
+    /* ===== METRIC VALUE (OUTPUT NUMBERS) ===== */
     div[data-testid="stMetricValue"] {
         font-size: 26px !important;
         font-weight: bold;
     }
  
-    /* Increase Metric label */
+    /* ===== METRIC LABEL ===== */
     div[data-testid="stMetricLabel"] {
         font-size: 22px !important;
     }
  
-    /* Highlight Predicted Cost */
+    /* ===== HIGHLIGHTED COST CARD ===== */
     .cost-card {
         background-color: #e8f4ff;
         padding: 20px;
         border-radius: 10px;
         border: 2px solid #1f77ff;
         text-align: center;
-        font-size: 25px !important;
+        font-size: 26px !important;
         font-weight: bold;
         color: #003b8e;
     }
@@ -180,6 +181,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
