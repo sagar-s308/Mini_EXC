@@ -30,6 +30,14 @@ st.markdown("""
     div[data-testid="stSelectbox"] div {
         font-size: 19px !important;
     }
+    
+    div[data-testid="stNumberInput"] > label,
+    div[data-testid="stSelectbox"] > label {
+        font-size: 19px !important;   /* set your common size here */
+        font-weight: 600 !important;  /* optional: same weight */
+        line-height: 1.2;
+    }
+
  
     /* Increase input labels */
     label {
@@ -180,6 +188,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
