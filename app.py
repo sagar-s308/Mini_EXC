@@ -13,9 +13,9 @@ st.markdown("""
     /* Make ALL number input boxes same width */
     div[data-testid="stNumberInput"] input {
         width: 120px !important;
-        padding: 1px !important;
+        padding: 6px !important;
         font-size: 19px !important;   /* Increased +5 */
-        text-align: center;
+        text-align: left;
         
     }
 
@@ -169,5 +169,6 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
