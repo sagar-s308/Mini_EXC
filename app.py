@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # ---------- Logo ----------
-#st.image("logo.png", width=250)   # keep logo.png in same folder
+st.image("logo.png", width=250)   # keep logo.png in same folder
 
 # ---------- Page config ----------
 st.set_page_config(page_title="Cylinder Cost estimator for Mini Excavators", layout="wide")
@@ -13,19 +13,19 @@ st.markdown("""
     <style>
     /* Number input labels */
     div[data-testid="stNumberInput"] > label {
-        font-size: 20px !important;
+        font-size: 25px !important;
         font-weight: 600 !important;
     }
 
     /* Selectbox labels */
     div[data-testid="stSelectbox"] > label {
-        font-size: 20px !important;
+        font-size: 25px !important;
         font-weight: 600 !important;
     }
 
     /* Slider labels (if you switch back to sliders later) */
     div[data-testid="stSlider"] > label {
-        font-size: 20px !important;
+        font-size: 25px !important;
         font-weight: 600 !important;
     }
 
@@ -125,6 +125,7 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
 
 
