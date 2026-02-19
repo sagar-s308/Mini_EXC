@@ -16,7 +16,7 @@ st.markdown("""
         padding: 6px !important;
         font-size: 19px !important;   /* Increased +5 */
         text-align: center;
-        background-color: #f2f2f2;   /* Light grey input */
+        
     }
 
     /* Increase Selectbox font */
@@ -169,3 +169,4 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
