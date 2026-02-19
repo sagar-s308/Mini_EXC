@@ -8,6 +8,50 @@ st.image("logo.png", width=250)   # keep logo.png in same folder
 
 # ---------- Page config ----------
 st.set_page_config(page_title="Cylinder Cost estimator for Mini Excavators", layout="wide")
+# ---------- Custom CSS: enlarge labels & key UI text ----------
+st.markdown("""
+    <style>
+    /* Number input labels */
+    div[data-testid="stNumberInput"] > label {
+        font-size: 20px !important;
+        font-weight: 600 !important;
+    }
+
+    /* Selectbox labels */
+    div[data-testid="stSelectbox"] > label {
+        font-size: 20px !important;
+        font-weight: 600 !important;
+    }
+
+    /* Slider labels (if you switch back to sliders later) */
+    div[data-testid="stSlider"] > label {
+        font-size: 20px !important;
+        font-weight: 600 !important;
+    }
+
+    /* Section header underlines & spacing improvements (optional) */
+    h1, h2, h3 {
+        line-height: 1.2;
+    }
+
+    /* Metric value size (optional) */
+    div[data-testid="stMetricValue"] {
+        font-size: 28px !important;
+    }
+    div[data-testid="stMetricDelta"] {
+        font-size: 16px !important;
+    }
+    div[data-testid="stMetricLabel"] {
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+
+    /* General paragraph/body text (optional) */
+    .stMarkdown p {
+        font-size: 18px !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 # ---------- Load model ----------
 model = pickle.load(open(r"./MiniExcmodel.pkl", "rb"))
@@ -52,22 +96,7 @@ with col2:
 # ---------- Dynamic calculation ----------
 weight = (np.pi / 4) * (0.00000785) * (tube_OD**2 * closed_len - (bore**2 - rod**2) * stroke)
 
-# ---------- Custom Font Size ----------
-st.markdown("""
-    <style>
-    .stSlider label, .stSelectbox label {
-        font-size: 22px !important;
-        font-weight: 600;
-    }
-    h1 {
-        font-size: 40px !important;
-        font-weight: 800;
-    }
-    .css-184tjsw p {
-        font-size: 20px !important;
-    }
-    </style>
-""", unsafe_allow_html=True)
+
 
 if weight < 0:
     st.warning("Estimated weight is negative. Please check inputs.")
@@ -96,4 +125,5 @@ try:
 except Exception as e:
     st.error("Prediction failed.")
     st.code(str(e))
+
 
